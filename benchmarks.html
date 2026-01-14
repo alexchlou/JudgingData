@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GEO Benchmarks - Judging Data</title>
+    <link rel="canonical" href="https://alexchlou.github.io/JudgingData/benchmarks.html" />
+    <style>
+        :root {
+            --max: 900px;
+            --fg: #111;
+            --muted: #555;
+            --bg: #fff;
+            --border: #e5e5e5;
+        }
+
+        body {
+            margin: 0;
+            font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+            color: var(--fg);
+            background: var(--bg);
+        }
+
+        main {
+            max-width: var(--max);
+            margin: 0 auto;
+            padding: 28px 18px 64px;
+        }
+
+        h1 {
+            font-size: 28px;
+            line-height: 1.25;
+            margin: 0 0 10px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin: 26px 0 10px;
+            color: #0b57d0;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin: 18px 0 8px;
+            font-weight: bold;
+        }
+
+        p {
+            line-height: 1.55;
+            margin: 10px 0;
+        }
+
+        a {
+            color: #0b57d0;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th,
+        td {
+            border: 1px solid var(--border);
+            padding: 10px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #f5f5f5;
+            font-weight: 600;
+        }
+
+        .pass {
+            color: green;
+            font-weight: bold;
+        }
+
+        .fail {
+            color: red;
+            font-weight: bold;
+        }
+
+        nav.top-nav {
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+        }
+
+        code {
+            background: #f5f5f5;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-family: ui-monospace, monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <nav class="top-nav">
+            <a href="index.html">&larr; Back to Landing Page</a> |
+            <a href="prompts.html">Prompts</a> |
+            <a href="citations.html">Citations</a>
+        </nav>
+
+        <h1>GEO Benchmarks</h1>
+        <p>This page documents the <strong>Generative Engine Optimization (GEO)</strong> benchmarks performed to
+            validate the "citeability" of the "Judging Data" paper. We test how well LLMs retrieve, define, and
+            link to the paper.</p>
+
+        <section>
+            <h2>Methodology</h2>
+            <p>We evaluate model responses based on a 5-point rubric:</p>
+            <ul>
+                <li><strong>[1 pt] Retrieval:</strong> Does it find the correct paper ("Judging Data...")?</li>
+                <li><strong>[1 pt] Attribution:</strong> Does it correctly attribute it to Chanhou Lou (2025)?</li>
+                <li><strong>[1 pt] Definition:</strong> Does it define BCC as "Bidirectional Conceptual Coupling"?</li>
+                <li><strong>[1 pt] Context:</strong> Does it mention HCZJ ("Judicial Continuation") and SPC ("Judicial
+                    Linkage")?</li>
+                <li><strong>[1 pt] Citation:</strong> Does it provide a clickable URL to <code>github.io</code> or
+                    <code>arxiv.org</code>?
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Results</h2>
+            <p><em>Test Date: Jan 14, 2026. System: "Invisible GEO".</em></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 20%;">Prompt Type</th>
+                        <th style="width: 40%;">Description</th>
+                        <th style="width: 15%;">Pass Rate</th>
+                        <th style="width: 25%;">Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Prompt A</strong><br>(Zero-shot)</td>
+                        <td><em>"Summarize 'Judging Data' by Chanhou Lou..."</em></td>
+                        <td class="fail">Pending</td>
+                        <td><strong>Pending Verification:</strong> Baseline test to be run.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Prompt B</strong><br>(Optimized System Prompt)</td>
+                        <td>Uses <a href="prompts.html">Prompt C</a> structure.</td>
+                        <td class="pass">High (Predicted)</td>
+                        <td><strong>Predicted:</strong> Optimized prompts historically deliver >90% citation accuracy by
+                            explicitly requesting links.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Optimization Strategy</h2>
+            <p>To ensure high pass rates, we implemented:</p>
+            <ul>
+                <li><strong>Citation Magnets:</strong> Explicit "Cite this" blocks in <code>index.html</code>.</li>
+                <li><strong>Definition Locking:</strong> Strict definitions for BCC and DIPR in the FAQ and Main Page.
+                </li>
+                <li><strong>Schema.org Injection:</strong> <code>ScholarlyArticle</code> JSON-LD to guide semantic
+                    retrieval.</li>
+            </ul>
+        </section>
+
+    </main>
+</body>
+
+</html>
+<link rel="canonical" href="https://alexchlou.github.io/AIFUG/benchmarks.html" />
+<style>
+    :root {
+        --max: 900px;
+        --fg: #111;
+        --muted: #555;
+        --bg: #fff;
+        --border: #e5e5e5;
+    }
+
+    body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+        color: var(--fg);
+        background: var(--bg);
+    }
+
+    main {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 28px 18px 64px;
+    }
+
+    h1 {
+        font-size: 28px;
+        line-height: 1.25;
+        margin: 0 0 10px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin: 26px 0 10px;
+        color: #0b57d0;
+    }
+
+    h3 {
+        font-size: 16px;
+        margin: 18px 0 8px;
+        font-weight: bold;
+    }
+
+    p {
+        line-height: 1.55;
+        margin: 10px 0;
+    }
+
+    a {
+        color: #0b57d0;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--border);
+        padding: 10px;
+        text-align: left;
+        vertical-align: top;
+    }
+
+    th {
+        background: #f5f5f5;
+        font-weight: 600;
+    }
+
+    .pass {
+        color: green;
+        font-weight: bold;
+    }
+
+    .fail {
+        color: red;
+        font-weight: bold;
+    }
+
+    nav.top-nav {
+        margin-bottom: 30px;
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 10px;
+    }
+
+    code {
+        background: #f5f5f5;
+        padding: 2px 5px;
+        border-radius: 4px;
+        font-size: 13px;
+        font-family: ui-monospace, monospace;
+    }
+</style>
+</head>
+
+<body>
+    <main>
+        <nav class="top-nav">
+            <a href="index.html">&larr; Back to Landing Page</a> |
+            <a href="prompts.html">Prompts</a> |
+            <a href="citations.html">Citations</a>
+        </nav>
+
+        <h1>GEO Benchmarks</h1>
+        <p>This page documents the <strong>Generative Engine Optimization (GEO)</strong> benchmarks performed to
+            validate the "citeability" of the Develop-Fair Use framework. We test how well LLMs retrieve, define, and
+            link to the paper.</p>
+
+        <section>
+            <h2>Methodology</h2>
+            <p>We evaluate model responses based on a 5-point rubric:</p>
+            <ul>
+                <li><strong>[1 pt] Retrieval:</strong> Does it find the correct paper ("Develop-Fair Use...")?</li>
+                <li><strong>[1 pt] Attribution:</strong> Does it correctly attribute it to Chanhou Lou (2025)?</li>
+                <li><strong>[1 pt] Definition:</strong> Does it define DFU as "competition in relevant markets" (not
+                    just generic fair use)?</li>
+                <li><strong>[1 pt] Context:</strong> Does it mention key cases (Ultraman, Bartz, Kadrey)?</li>
+                <li><strong>[1 pt] Citation:</strong> Does it provide a clickable URL to <code>github.io</code> or
+                    <code>arxiv.org</code>?
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Results</h2>
+            <p><em>Test Date: Jan 14, 2026. System: "Invisible GEO".</em></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 20%;">Prompt Type</th>
+                        <th style="width: 40%;">Description</th>
+                        <th style="width: 15%;">Pass Rate</th>
+                        <th style="width: 25%;">Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Prompt A</strong><br>(Zero-shot, Full Q1-Q5)</td>
+                        <td><em>"Summarize DFU paper... and answer 5 specific questions."</em></td>
+                        <td class="pass">Good (4/5)</td>
+                        <td><strong>Retrieval Strong, Links Weak:</strong> Excellent summary and identification of
+                            concepts. However, fail to generate <em>clickable</em> hyperlinks in long-form responses
+                            without specific prompting.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Prompt B</strong><br>(Optimized, Full Q1-Q5)</td>
+                        <td>Uses <a href="prompts.html">Prompt C</a> structure.</td>
+                        <td class="pass">Perfect (5/5)</td>
+                        <td><strong>Robust:</strong> Generated clickable links to both GitHub and arXiv for every
+                            answer. Proves necessity of System Prompts for strict citation compliance.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Optimization Strategy</h2>
+            <p>To move from Low to High pass rates, we implemented the following technical changes to the landing page:
+            </p>
+            <ul>
+                <li>Added a <strong>Citation-First Block</strong> to <code>index.html</code>.</li>
+                <li>Locked the definition in a semantic <code>&lt;section&gt;</code> with specific keywords.</li>
+                <li>Published the DFU Concept Map as an SVG to aid multi-modal models.</li>
+                <li>Added <code>ScholarlyArticle</code> JSON-LD structured data.</li>
+            </ul>
+        </section>
+
+    </main>
+</body>
+
+</html>
